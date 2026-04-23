@@ -12,7 +12,7 @@
     "ff": "^0.2.2",
     "jsonwebtoken": "^7.4.3",
     "request": "^2.81.0",
-    "uuid": "^9.0.1",
+    "uuid": "^14.0.0",
     "validator": "^13.7.0"
   },
   "devDependencies": {},
