@@ -290,3 +290,7 @@ poynt.charge(
 - `unregisterApplePayMerchant`
 - `getApplePayMerchant`
 - `getApplePayDomainAssociationFile`
+
+## License
+
+MIT - see [LICENSE](./LICENSE).
