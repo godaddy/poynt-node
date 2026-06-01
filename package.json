@@ -3,6 +3,10 @@
   "version": "0.0.49",
   "description": "Poynt Node.js SDK",
   "main": "lib/index.js",
+  "files": [
+    "lib",
+    "CHANGELOG.md"
+  ],
   "engines": {
     "node": ">=14.0.0"
   },

@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `package.json` `files` allowlist - publishes only `lib/` and `CHANGELOG.md` alongside the npm-default `README.md`, `LICENSE`, and `package.json`. Trims `.github/`, `.tartufo/`, `tartufo.toml`, `.jshintrc`, `.nvmrc`, `.npmrc`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, and `SECURITY.md` from the published tarball.
+- `README.md` - License section pointing to `LICENSE`.
+
+### Changed
+- `package.json` `repository.url` - SSH (`git@github.com:...`) -> HTTPS (`https://github.com/...`); npm convention and avoids `npm publish` warnings.
 
 ## [0.0.49] - 2026-03-03
 ### Added
