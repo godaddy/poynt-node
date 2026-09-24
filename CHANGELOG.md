@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.0] - 2026-09-24
 ### Security
 - `nakedRequest()` no longer disables TLS certificate validation. Previously every API/webhook request set `rejectUnauthorized: false` unconditionally (with no opt-out), silently accepting any certificate including self-signed or otherwise invalid ones. Certificates are now validated normally. **This is a deliberate behavior change** — if your deployment was relying on the previous bypass (e.g. talking to an endpoint with a self-signed cert), requests to that endpoint will now fail with a TLS error.
 - Removed the deprecated, unmaintained `request` package (its dependency, `request@2.88.2`, has an unpatched SSRF advisory, CVE-2023-28155, with no upstream fix available) and its entire transitive dependency tree: `joi`, `hoek`, `tough-cookie`, `qs` (nested copy), `form-data` (nested copy), `aws-sign2`, `aws4`, `har-validator`, `hawk`, and a second, older nested `uuid` copy. This closes several CVEs at once, including ones with no available patch (`hoek`'s CVE-2020-36604) since the vulnerable package is gone rather than patched.
