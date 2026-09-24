@@ -8,15 +8,14 @@
     "CHANGELOG.md"
   ],
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "async": "^2.5.0",
     "debug": "^3.0.0",
     "ff": "^0.2.2",
-    "jsonwebtoken": "^7.4.3",
-    "request": "^2.81.0",
-    "uuid": "^9.0.1",
+    "jsonwebtoken": "^9.0.3",
+    "uuid": "^11.1.1",
     "validator": "^13.7.0"
   },
   "devDependencies": {},
