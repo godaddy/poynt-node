@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-11-23
+### Security
+- The SDK now URL-encodes caller-supplied IDs and query values in the request path, so a value such as `../../x?y=1` can no longer change the endpoint or the query of an API call. This affects `apple-pay.js`, `applications.js`, `collect.js`, `invoices.js` and `businesses.js`. For IDs such as `urn:aid:...`, the path now carries `%3A` instead of `:`, which servers decode to the same value.
+- The `debug` log (`DEBUG=poynt`) no longer prints the `Authorization` header, the `/token` request body (signed JWT assertion) or the `/token` response (access and refresh tokens). These values show as `[REDACTED]`. If you ran with `DEBUG=poynt` in an environment with shared or aggregated logs, rotate the application private keys and tokens.
+
+### Added
+- `npm test` now runs `node --test` with checks for URL encoding and log redaction.
+
 ## [1.0.1] - 2026-09-24
 ### Fixed
 - Published a new patch version to avoid a registry name and version collision affecting some consumers.
