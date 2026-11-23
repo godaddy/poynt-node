@@ -20,7 +20,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"No tests specified\""
+    "test": "node --test"
   },
   "repository": {
     "type": "git",
